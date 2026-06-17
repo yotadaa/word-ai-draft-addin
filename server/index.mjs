@@ -1,9 +1,14 @@
 import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 
-dotenv.config({ path: ".env.local" });
-dotenv.config();
+const serverDir = path.dirname(fileURLToPath(import.meta.url));
+const projectRoot = path.resolve(serverDir, "..");
+
+dotenv.config({ path: path.join(projectRoot, ".env.local") });
+dotenv.config({ path: path.join(projectRoot, ".env") });
 
 const app = express();
 const port = Number(process.env.API_PORT ?? 3001);
