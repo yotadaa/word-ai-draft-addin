@@ -4,15 +4,16 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "concurrently -k -n taskpane,api -c cyan,magenta \"vite --host 127.0.0.1 --port 3000 --strictPort\" \"node server/index.mjs\"",
+    "dev": "concurrently -k -n taskpane,api -c cyan,magenta \"vite --host localhost --port 3000 --strictPort\" \"node server/index.mjs\"",
     "dev:reset": "node scripts/free-ports.mjs && npm run dev",
     "free:ports": "node scripts/free-ports.mjs",
     "ports": "node scripts/ports.mjs",
     "build": "tsc && vite build",
-    "preview": "vite preview --host 127.0.0.1 --port 3000",
+    "preview": "vite preview --host localhost --port 3000",
     "start:api": "node server/index.mjs",
     "certs": "office-addin-dev-certs install",
     "validate:manifest": "office-addin-manifest validate manifest.xml",
+    "check:ai": "node scripts/check-ai.mjs",
     "sideload": "office-addin-debugging start manifest.xml desktop --app word",
     "stop": "office-addin-debugging stop manifest.xml"
   },
