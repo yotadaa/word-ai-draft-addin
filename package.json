@@ -1,0 +1,42 @@
+{
+  "name": "word-ai-draft-addin",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n taskpane,api -c cyan,magenta \"vite --host 127.0.0.1 --port 3000 --strictPort\" \"node server/index.mjs\"",
+    "dev:reset": "node scripts/free-ports.mjs && npm run dev",
+    "free:ports": "node scripts/free-ports.mjs",
+    "ports": "node scripts/ports.mjs",
+    "build": "tsc && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 3000",
+    "start:api": "node server/index.mjs",
+    "certs": "office-addin-dev-certs install",
+    "validate:manifest": "office-addin-manifest validate manifest.xml",
+    "sideload": "office-addin-debugging start manifest.xml desktop --app word",
+    "stop": "office-addin-debugging stop manifest.xml"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^5.0.0",
+    "concurrently": "^9.2.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "liquid-glass-react": "^1.1.1",
+    "lucide-react": "^0.468.0",
+    "office-addin-debugging": "^6.1.1",
+    "office-addin-dev-certs": "^2.0.9",
+    "office-addin-manifest": "^2.1.5",
+    "vite": "^7.2.7"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/node": "^24.10.1",
+    "@types/office-js": "^1.0.589",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "typescript": "^5.9.3"
+  }
+}

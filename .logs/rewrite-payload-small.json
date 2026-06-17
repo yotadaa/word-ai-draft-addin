@@ -1,0 +1,12 @@
+﻿{
+  "mode": "shrink",
+  "targetWords": 12,
+  "snapshot": {
+    "selectedText": "Algoritma genetika digunakan untuk mencari solusi penjadwalan praktikum dengan mempertimbangkan batasan ruang, waktu, dosen, dan kelompok praktikum.",
+    "context": {
+      "heading": "3.2 Algoritma Genetika",
+      "before": [],
+      "after": []
+    }
+  }
+}

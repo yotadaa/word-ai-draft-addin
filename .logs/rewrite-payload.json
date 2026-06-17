@@ -1,0 +1,12 @@
+﻿{
+  "mode": "extend",
+  "targetWords": 45,
+  "snapshot": {
+    "selectedText": "Algoritma genetika digunakan untuk mencari solusi penjadwalan praktikum.",
+    "context": {
+      "heading": "3.2 Algoritma Genetika",
+      "before": ["Penjadwalan praktikum memiliki sejumlah batasan yang perlu dipenuhi."],
+      "after": ["Fuzzy logic digunakan untuk menyesuaikan parameter secara adaptif."]
+    }
+  }
+}
